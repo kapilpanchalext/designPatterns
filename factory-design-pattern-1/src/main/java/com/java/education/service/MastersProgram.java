@@ -1,11 +1,7 @@
 package com.java.education.service;
 
-import com.java.education.model.CommerceProgram;
-import com.java.education.model.EngineeringProgram;
 import com.java.education.model.FieldType;
 import com.java.education.model.Program;
-import com.java.education.model.ScienceProgram;
-
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
@@ -15,12 +11,7 @@ public class MastersProgram extends AbstractProgramLevel{
 
 	@Override
 	protected Program createProgram() {
-		return switch(field) {
-		case ENGINEERING -> new EngineeringProgram();
-		case COMMERCE -> new CommerceProgram();
-		case SCIENCE -> new ScienceProgram();
-		default -> null;
-		};
+		return ProgramFieldFactory.create(field);
 	}
 
 	@Override
