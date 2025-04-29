@@ -10,7 +10,9 @@ public class ProgramFactory {
 		FieldType fieldType = FieldType.valueOf(field.toUpperCase());
 
 			return switch (level.toLowerCase()) {
+			case "bachelors" -> new BachelorsProgram(fieldType);
 			case "masters" -> new MastersProgram(fieldType);
+			case "phd" -> new PhdProgram(fieldType);
 			default -> throw new IllegalArgumentException("Invalid Program Level: " + level);
 		};
 	}

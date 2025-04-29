@@ -9,8 +9,8 @@ import com.java.education.model.ScienceProgram;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public class MastersProgram extends AbstractProgramLevel{
-	
+public class PhdProgram extends AbstractProgramLevel{
+
 	private final FieldType field;
 
 	@Override
@@ -25,6 +25,6 @@ public class MastersProgram extends AbstractProgramLevel{
 
 	@Override
 	protected String getLevelName() {
-		return "Masters";
+		return "Phd";
 	}
 }
