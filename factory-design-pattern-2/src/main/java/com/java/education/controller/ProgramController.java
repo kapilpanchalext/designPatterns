@@ -14,11 +14,11 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ProgramController {
 	private final ProgramService programService;
-	
+
 	@PostMapping(path = "/programs")
-	public ResponseEntity<String> createProgram(@RequestParam String level, @RequestParam String field){
-		programService.createProgram(level, field);
-		return ResponseEntity.status(HttpStatus.OK).body("Program Created Successfully!");
+	public ResponseEntity<String> createProgram(@RequestParam String level, @RequestParam String field, @RequestParam int age, @RequestParam double gpa){
+		String result = programService.createProgram(level, field, age, gpa);
+		return ResponseEntity.status(HttpStatus.OK).body(result);
 	}
-	
+
 }

@@ -19,12 +19,12 @@ public class ProgramService {
 	private final MasterRepository masterRepository;
 	private final PhDRepository phdRepository;
 
-	public void createProgram(String level, String field) {
+	public String createProgram(String level, String field, int age, double gpa) {
 		AbstractProgram program = programFactory.getProgram(level, field);
 		int duration = program.getDuration();
 		double fees = program.getFees();
-		boolean eligible = program.isEligible(duration, fees);
-
+		boolean eligible = program.isEligible(age, gpa);
+		
 		if (!eligible) {
 			throw new IllegalArgumentException("Not eligible for the program");
 		}
@@ -36,21 +36,21 @@ public class ProgramService {
 			bachelor.setDuration(duration);
 			bachelor.setFees(fees);
 			bachelorRepository.save(bachelor);
-			break;
+			return program.getProgramDetails();
 		case "master":
 			Master master = new Master();
 			master.setField(field);
 			master.setDuration(duration);
 			master.setFees(fees);
 			masterRepository.save(master);
-			break;
+			return program.getProgramDetails();
 		case "phd":
 			PhD phd = new PhD();
 			phd.setField(field);
 			phd.setDuration(duration);
 			phd.setFees(fees);
 			phdRepository.save(phd);
-			break;
+			return program.getProgramDetails();
 		default:
 			throw new IllegalArgumentException("Invalid program level: " + level);
 		}
