@@ -16,7 +16,12 @@ public class ProgramController {
 	private final ProgramService programService;
 
 	@PostMapping(path = "/programs")
-	public ResponseEntity<String> createProgram(@RequestParam String level, @RequestParam String field, @RequestParam int age, @RequestParam double gpa){
+	public ResponseEntity<String> createProgram(
+			@RequestParam String level, 
+			@RequestParam String field, 
+			@RequestParam int age, 
+			@RequestParam double gpa){
+
 		String result = programService.createProgram(level, field, age, gpa);
 		return ResponseEntity.status(HttpStatus.OK).body(result);
 	}
