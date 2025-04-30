@@ -1,5 +1,6 @@
 package com.java.factory;
 
+import com.java.factory.logistics.RailLogistics;
 import com.java.factory.logistics.RoadLogistics;
 import com.java.factory.logistics.SeaLogistics;
 import lombok.extern.slf4j.Slf4j;
@@ -14,5 +15,8 @@ public class App {
         
         SeaLogistics seaLogistics = new SeaLogistics();
         seaLogistics.planDelivery();
+        
+        RailLogistics railLogistics = new RailLogistics();
+        railLogistics.planDelivery();
     }
 }
