@@ -6,8 +6,8 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class RailLogistics extends Logistics {
-	@Override
 
+	@Override
 	public Transport createTransport() {
 		log.info("Create Rail Transport");
 		return new Rail();
