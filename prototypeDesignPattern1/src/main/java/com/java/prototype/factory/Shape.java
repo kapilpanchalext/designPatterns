@@ -1,10 +1,17 @@
 package com.java.prototype.factory;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public abstract class Shape {
 
-	protected int x;
-  protected int y;
-  protected String color;
+	private int x;
+  private int y;
+  private String color;
 
+  public abstract Shape clone();
 }
