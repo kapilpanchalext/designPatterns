@@ -1,8 +1,14 @@
 package com.java.singleton.factory;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Database {
 
 	private static volatile Database instance;
+	private String val;
 	
   // The singleton's constructor should always be private to prevent direct construction.
   private Database() {
@@ -22,6 +28,7 @@ public class Database {
 	}
 	
 	public void query(String sql) {
+		this.setVal("Hello World Singleton!");
 		System.out.println("Executing Query: " + sql);
 	}
 }
