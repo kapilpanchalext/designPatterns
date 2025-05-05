@@ -1,7 +1,5 @@
 package com.java.singleton.multithreading;
 
-import com.java.singleton.factory.Database;
-
 public class UnsafeDatabase {
 	private static UnsafeDatabase instance;
 	
