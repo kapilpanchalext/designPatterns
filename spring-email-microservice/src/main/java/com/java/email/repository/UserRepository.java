@@ -5,5 +5,5 @@ import com.java.email.domain.User;
 
 public interface UserRepository extends JpaRepository<User, Long>{
 	User findByEmailIgnoreCase(String email);
-	boolean existByEmail(String email);
+	boolean existsByEmail(String email);
 }
