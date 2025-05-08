@@ -31,13 +31,13 @@ public class UserController {
 						.statusCode(HttpStatus.CREATED.value()).build());
 	}
 	
-	@GetMapping(path = "/")
-	public ResponseEntity<HttpResponse> confirmUserAccount(@RequestParam("token") String token) {
+	@GetMapping
+	public ResponseEntity<HttpResponse> confirmUserAccount(@RequestParam String token) {
 		boolean isSuccess = userService.verifyToken(token);
 
 		return ResponseEntity.status(HttpStatus.CREATED)
 				.body(HttpResponse.builder().timestamp(LocalDateTime.now().toString())
-						.data(Map.of("Success", isSuccess)).message("Acount Verified").status(HttpStatus.OK)
+						.data(Map.of("Success", isSuccess)).message("Account Verified").status(HttpStatus.OK)
 						.statusCode(HttpStatus.OK.value()).build());
 	}
 } //yrtm rxmo ncll xxgu
