@@ -12,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 public class UserServiceImpl implements UserService {
 	private final UserRepository userRepository;
 	private final ConfirmationRepository confirmationRepository;
+	private final EmailService emailService;
 
 	@Override
 	public User saveUser(User user) {
@@ -26,7 +27,7 @@ public class UserServiceImpl implements UserService {
 		confirmationRepository.save(confirmation);
 		
 		/** TODO Send email to user with Token */
-		
+		emailService.sendSimpleMailMessage(user.getName(), user.getEmail(), confirmation.getToken());
 		return user;
 	}
 
@@ -38,5 +39,4 @@ public class UserServiceImpl implements UserService {
 		userRepository.save(user);
 		return Boolean.TRUE;
 	}
-
 }

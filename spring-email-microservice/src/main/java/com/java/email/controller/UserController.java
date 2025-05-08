@@ -40,4 +40,4 @@ public class UserController {
 						.data(Map.of("Success", isSuccess)).message("Acount Verified").status(HttpStatus.OK)
 						.statusCode(HttpStatus.OK.value()).build());
 	}
-}
+} //yrtm rxmo ncll xxgu
