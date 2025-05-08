@@ -6,5 +6,4 @@ public interface EmailService {
 	void sendMimeEmailWithEmbeddedFile(String name, String to, String token);
 	void sendHTMLEmail(String name, String to, String token);
 	void sendHTMLEmailWithEmbeddedFile(String name, String to, String token);
-	
 }

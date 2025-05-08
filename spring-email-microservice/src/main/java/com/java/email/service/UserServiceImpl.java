@@ -25,11 +25,14 @@ public class UserServiceImpl implements UserService {
 		
 		Confirmation confirmation = new Confirmation(user);
 		confirmationRepository.save(confirmation);
-		
+
 		/** TODO Send email to user with Token */
 //		emailService.sendSimpleMailMessage(user.getName(), user.getEmail(), confirmation.getToken());
 //		emailService.sendMimeMessageWithAttachments(user.getName(), user.getEmail(), confirmation.getToken());
-		emailService.sendMimeEmailWithEmbeddedFile(user.getName(), user.getEmail(), confirmation.getToken());
+//		emailService.sendMimeEmailWithEmbeddedFile(user.getName(), user.getEmail(), confirmation.getToken());
+
+		emailService.sendHTMLEmail(user.getName(), user.getEmail(), confirmation.getToken());
+
 		return user;
 	}
 

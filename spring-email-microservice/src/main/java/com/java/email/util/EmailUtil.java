@@ -11,7 +11,7 @@ public class EmailUtil {
 		return result;
 	}
 
-	private static String getVerificationUrl(String host, String token) {
+	public static String getVerificationUrl(String host, String token) {
 		
 		String result = "api/users?token=";
 		
