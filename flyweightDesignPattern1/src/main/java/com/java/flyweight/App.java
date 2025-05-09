@@ -30,7 +30,6 @@ public class App {
 		}
 		
 		ForestPanel forestPanel = new ForestPanel(forest);
-		
 		forestPanel.setPreferredSize(new Dimension(1000, 500));
 		
 		frame.add(new JScrollPane(forestPanel));
