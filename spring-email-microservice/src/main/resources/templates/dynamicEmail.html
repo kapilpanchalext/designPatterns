@@ -1,0 +1,52 @@
+<table class="body-wrap" bgcolor="#f0f0f0" width="100%" cellpadding="0" cellspacing="0" style="font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f0f0;">
+  <style>
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.85; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    .bounce {
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+
+  <tr>
+    <td></td>
+    <td width="600" align="center" style="margin: auto;">
+      <table width="100%" bgcolor="#ffffff" style="border-radius: 8px; border: 1px solid #ddd; overflow: hidden;">
+        <tr>
+          <td align="center" bgcolor="#4A90E2" style="padding: 30px; color: white; font-size: 24px;">
+            <strong class="pulse" style="display: inline-block;">Welcome to Our Company 🌌</strong>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 30px; color: #333;">
+            <p style="font-size: 16px;">Hello <strong th:text="${name}">User</strong>,</p>
+            <p>We're thrilled to have you aboard. You're about to explore an entire universe of features 🚀.</p>
+            <p>Click below to start your journey with us:</p>
+            <p align="center">
+              <a href="#" th:href="${url}" style="background-color: #f1556c; color: white; text-decoration: none; padding: 12px 24px; border-radius: 5px; font-weight: bold; display: inline-block;" class="bounce">
+                Begin Your Mission
+              </a>
+            </p>
+            <p style="margin-top: 30px;">Need help? Our crew is always ready to assist. 🛠️</p>
+          </td>
+        </tr>
+        <tr>
+          <td bgcolor="#f7f7f7" style="padding: 20px; text-align: center; font-size: 12px; color: #999;">
+            You’re receiving this email because you signed up for our service.<br>
+            <a href="#" style="color: #999;">Unsubscribe</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+    <td></td>
+  </tr>
+</table>
