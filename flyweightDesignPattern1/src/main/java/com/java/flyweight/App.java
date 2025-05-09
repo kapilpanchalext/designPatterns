@@ -4,13 +4,10 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.ScrollPane;
 import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
-
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
-
 import com.java.flyweight.factory.Forest;
 import com.java.flyweight.factory.ForestPanel;
 
