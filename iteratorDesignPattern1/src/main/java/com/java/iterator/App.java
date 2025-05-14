@@ -7,7 +7,6 @@ import com.java.iterator.factory.SocialNetwork;
 import com.java.iterator.factory.SocialSpammer;
 
 public class App {
-	
 	private SocialNetwork network;
 	private SocialSpammer spammer;
 	

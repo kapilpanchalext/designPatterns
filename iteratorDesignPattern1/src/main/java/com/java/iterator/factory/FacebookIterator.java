@@ -25,7 +25,7 @@ public class FacebookIterator implements ProfileIterator {
 	@Override
 	public boolean hasMore() {
 		lazyInit();
-		return currentposition > cache.size();
+		return currentposition < cache.size();
 	}
 
 	@Override
