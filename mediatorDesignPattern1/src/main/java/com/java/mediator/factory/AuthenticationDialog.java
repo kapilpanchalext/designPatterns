@@ -29,7 +29,7 @@ public class AuthenticationDialog implements Mediator {
 				System.err.println("Switched to Registration Form");
 			}
 		}
-		
+
 		if(sender == okBtn && event.equals("click")) {
 			if(loginOrRegisterCheckbox.isChecked()) {
 				String user = loginUsername.getText();
@@ -48,31 +48,31 @@ public class AuthenticationDialog implements Mediator {
 			}
 		}
 	}
-	
+
 	public Checkbox getLoginRegistrationCheckbox() {
 		return loginOrRegisterCheckbox;
 	}
-	
+
 	public Textbox getLoginUsername() {
 		return loginUsername;
 	}
-	
+
 	public Textbox getLoginPassword() {
 		return loginPassword;
 	}
-	
+
 	public Textbox getRegistrationUsername() {
 		return registrationUsername;
 	}
-	
+
 	public Textbox getRegistrationPassword() {
 		return registrationPassword;
 	}
-	
+
 	public Textbox getRegistrationEmail() {
 		return registrationEmail;
 	}
-	
+
 	public Button getOkBtn() {
 		return okBtn;
 	}
