@@ -1,5 +1,7 @@
 package com.java.mediator.factory;
 
+import java.util.Collection;
+
 public class AuthenticationDialog implements Mediator {
 	private String title;
 	private Checkbox loginOrRegisterCheckbox;
@@ -74,6 +76,8 @@ public class AuthenticationDialog implements Mediator {
 	}
 
 	public Button getOkBtn() {
+		
+		
 		return okBtn;
 	}
 }
