@@ -4,6 +4,10 @@ import com.java.abstractfactory.product.Product;
 
 public class Laptop implements Product {
 
+	/**
+	 * @param no parameters
+	 * @return String
+	 * */
 	@Override
 	public String getName() {
 		return "Laptop";
